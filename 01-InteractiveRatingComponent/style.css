@@ -1,0 +1,125 @@
+:root {
+	--color-white: hsl(0, 0%, 100%);
+	--color-light-grey: hsl(217, 12%, 63%);
+	--color-medium-grey: hsl(216, 12%, 54%);
+	--color-dark-blue: hsl(213, 19%, 18%);
+	--color-very-dark-blue: hsl(216, 12%, 8%);
+	--color-orange: hsl(25, 97%, 53%);
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+/* Typography */
+h1 {
+	font-size: 36px;
+	font-weight: 700;
+	color: var(--color-white);
+}
+
+/* Flex */
+.flex {
+	display: flex;
+}
+.flex.center {
+	align-items: center;
+	justify-content: center;
+}
+.flex.justifyspacebetween {
+	justify-content: space-between;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	min-height: 100vh;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Overpass', sans-serif;
+	font-size: 15px;
+	font-weight: 400;
+	color: var(--color-light-grey);
+	background-color: var(--color-very-dark-blue);
+}
+
+/* Card + content */
+
+#ratingCard {
+	height: auto;
+	width: 100%;
+	max-width: 410px;
+	padding: 30px;
+	background: radial-gradient(farthest-corner at -100px -100px, var(--color-dark-blue) 0%, var(--color-very-dark-blue) 100%);
+	border-radius: 30px;
+}
+#ratingCard h1 {
+	margin: 35px 0 20px;
+}
+.icon {
+	height: 48px;
+	width: 48px;
+	background: var(--color-dark-blue);
+	border-radius: 100%;
+	font-size: 18px;
+}
+.icon.star img {
+	max-height: 18px;
+	max-width: 18px;
+}
+ul.ratingSelect {
+	list-style: none;
+	margin: 30px 0;
+	padding: 0;
+}
+ul.ratingSelect li {
+	margin: 0;
+	font-size: 15px;
+}
+ul.ratingSelect li button {
+	height: 100%;
+	width: 100%;
+	color: var(--color-medium-grey);
+	background: transparent;
+	border: 0;
+	border-radius: 100%;
+	transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+ul.ratingSelect li button:hover {
+	background: var(--color-orange);
+	color: var(--color-white);
+}
+#ratingSubmit {
+	height: auto;
+	width: 100%;
+	padding: 16px 32px;
+	text-transform: uppercase;
+	background: var(--color-orange);
+	color: var(--color-white);
+	border-radius: 24px;
+	transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+#ratingSubmit:hover {
+	background: var(--color-white);
+	color: var(--color-orange);
+}
+
+#thankYouMessage {
+	display: none;
+}
+
+/* Footer */
+
+body > .attribution {
+	position: sticky;
+	top: 100vh;
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
