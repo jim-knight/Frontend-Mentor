@@ -12,35 +12,38 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+  <script defer src="script.js"></script>
 </head>
 <body>
   <div id="ratingCard">
   <!-- Rating state start -->
-    <div class="icon star flex center"><img src="images/icon-star.svg"></div>
-    <h1>How did we do?</h1>
+    <div id="ratingSelect">
+      <div class="icon star flex center"><img src="images/icon-star.svg"></div>
+      <h1>How did we do?</h1>
 
-    <p>Please let us know how we did with your support request. All feedback is appreciated 
-      to help us improve our offering!</p>
-    
-    <ul id="ratingSelect" class="flex justifyspacebetween ratingSelect">
-      <li class="flex center icon" data-ratingSelect="1"><button>1</button></li>
-      <li class="flex center icon" data-ratingSelect="2"><button>2</button></li>
-      <li class="flex center icon" data-ratingSelect="3"><button>3</button></li>
-      <li class="flex center icon" data-ratingSelect="4"><button>4</button></li>
-      <li class="flex center icon" data-ratingSelect="5"><button>5</button></li>
-    </ul>
-    <button id="ratingSubmit">Submit</button>
-
+      <p>Please let us know how we did with your support request. All feedback is appreciated 
+        to help us improve our offering!</p>
+      
+      <ul id="ratingSelection" class="flex justifyspacebetween">
+        <li class="flex center icon ratingSelector" data-ratingSelect="1"><button>1</button></li>
+        <li class="flex center icon ratingSelector" data-ratingSelect="2"><button>2</button></li>
+        <li class="flex center icon ratingSelector active" data-ratingSelect="3"><button>3</button></li>
+        <li class="flex center icon ratingSelector" data-ratingSelect="4"><button>4</button></li>
+        <li class="flex center icon ratingSelector" data-ratingSelect="5"><button>5</button></li>
+      </ul>
+      <button id="ratingSubmit">Submit</button>
+    </div>
   <!-- Rating state end -->
 
     <!-- Thank you state start -->
-    <div id="thankYouMessage">
-    You selected <!-- Add rating here --> out of 5
+    <div id="thankYouMessage" class="flex column center">
+      <img src="images/illustration-thank-you.svg">
+      <div id="ratingOutput" class="flex">You selected <!-- Add rating here --> out of 5</div>
 
-    Thank you!
+      <div class="h3">Thank you!</div>
 
-    We appreciate you taking the time to give a rating. If you ever need more support, 
-    don’t hesitate to get in touch!
+      We appreciate you taking the time to give a rating. If you ever need more support, 
+      don't hesitate to get in touch!
     </div>
     <!-- Thank you state end -->
   </div>
