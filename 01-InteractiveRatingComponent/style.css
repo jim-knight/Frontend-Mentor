@@ -74,6 +74,7 @@ body {
 	height: auto;
 	width: 100%;
 	max-width: 410px;
+	margin: 50px 20px;
 	padding: 45px 35px;
 	background: radial-gradient(farthest-corner at -100px -100px, var(--color-medium-blue) 0%, var(--color-medium-dark-blue) 100%);
 	border-radius: 30px;
@@ -95,7 +96,11 @@ body {
 
 /* State- Rating select */
 
-#ratingSelect {
+#ratingSelectForm {
+	display: none;
+	position: relative;
+}
+#ratingSelectForm.active {
 	display: block;
 }
 ul#ratingSelection {
@@ -124,7 +129,7 @@ ul#ratingSelection li button:hover {
 	background: var(--color-orange);
 	color: var(--color-white);
 }
-#ratingSubmit {
+#ratingSubmitButton {
 	height: auto;
 	width: 100%;
 	padding: 16px 32px;
@@ -134,13 +139,28 @@ ul#ratingSelection li button:hover {
 	border-radius: 24px;
 	transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
-#ratingSubmit:hover {
+#ratingSubmitButton:hover {
 	background: var(--color-white);
 	color: var(--color-orange);
 }
+.errorMessage {
+	opacity: 0;
+	position: absolute;
+	width: 100%;
+	margin-top: 5px;
+	font-size: 12px;
+	transition: opacity 0.3s ease-in-out;
+}
+.errorMessage.active {
+	opacity: 1;
+}
+
 /* State- Thank you */
 #thankYouMessage {
 	display: none;
+}
+#thankYouMessage.active {
+	display: flex;
 }
 #thankYouMessage img {
 	margin-bottom: 30px;

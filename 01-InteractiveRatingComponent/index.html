@@ -17,7 +17,7 @@
 <body>
   <div id="ratingCard">
   <!-- Rating state start -->
-    <div id="ratingSelect">
+    <div id="ratingSelectForm" class="active">
       <div class="icon star flex center"><img src="images/icon-star.svg"></div>
       <h1>How did we do?</h1>
 
@@ -25,13 +25,14 @@
         to help us improve our offering!</p>
       
       <ul id="ratingSelection" class="flex justifyspacebetween">
-        <li class="flex center icon ratingSelector" data-ratingSelect="1"><button>1</button></li>
-        <li class="flex center icon ratingSelector" data-ratingSelect="2"><button>2</button></li>
-        <li class="flex center icon ratingSelector active" data-ratingSelect="3"><button>3</button></li>
-        <li class="flex center icon ratingSelector" data-ratingSelect="4"><button>4</button></li>
-        <li class="flex center icon ratingSelector" data-ratingSelect="5"><button>5</button></li>
+        <li class="flex center icon ratingValue" data-rating-select="1"><button>1</button></li>
+        <li class="flex center icon ratingValue" data-rating-select="2"><button>2</button></li>
+        <li class="flex center icon ratingValue" data-rating-select="3"><button>3</button></li>
+        <li class="flex center icon ratingValue" data-rating-select="4"><button>4</button></li>
+        <li class="flex center icon ratingValue" data-rating-select="5"><button>5</button></li>
       </ul>
-      <button id="ratingSubmit">Submit</button>
+      <button id="ratingSubmitButton">Submit</button>
+      <div class="errorMessage">I'm sorry, you need to select a value before submission</div>
     </div>
   <!-- Rating state end -->
 
