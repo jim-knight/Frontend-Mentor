@@ -109,7 +109,7 @@ ul#ratingSelection {
 	padding: 0;
 }
 ul#ratingSelection li {
-	margin: 0;
+	flex: 0 0 48px;
 	font-size: 15px;
 }
 ul#ratingSelection li button {
@@ -186,4 +186,19 @@ body > .attribution {
 }
 .attribution a {
 	color: hsl(228, 45%, 44%);
+}
+
+/* Media queries */
+@media (max-width: 360px) {
+	#ratingCard {
+		padding: 30px 20px;
+	}
+	ul#ratingSelection {
+		flex-flow: row wrap;
+		justify-content: center;
+	}
+	ul#ratingSelection li {
+		flex: 0 0 48px;
+		margin: 0 5px 5px;
+	}
 }
