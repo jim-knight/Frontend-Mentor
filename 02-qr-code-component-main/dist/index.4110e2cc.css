@@ -338,16 +338,12 @@ img, video {
   padding-bottom: 1.75rem;
 }
 
-.pb-5 {
-  padding-bottom: 1.25rem;
-}
-
 .pb-6 {
   padding-bottom: 1.5rem;
 }
 
-.pb-1 {
-  padding-bottom: .25rem;
+.pb-5 {
+  padding-bottom: 1.25rem;
 }
 
 .pb-2 {
@@ -389,6 +385,11 @@ img, video {
 .text-orange-400 {
   --tw-text-opacity: 1;
   color: rgb(251 146 60 / var(--tw-text-opacity));
+}
+
+.drop-shadow-2xl {
+  --tw-drop-shadow: drop-shadow(0 25px 25px #00000026);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 /*# sourceMappingURL=index.4110e2cc.css.map */
