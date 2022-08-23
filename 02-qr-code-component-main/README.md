@@ -26,7 +26,7 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 ### Links
 
 - Solution URL: [https://github.com/jim-knight/Frontend-Mentor/tree/main/02-qr-code-component-main](https://github.com/jim-knight/Frontend-Mentor/tree/main/02-qr-code-component-main)
-- Live Site URL: [https://cheerful-marigold-3561af.netlify.app/](https://cheerful-marigold-3561af.netlify.app/)
+- Live Site URL: [https://fementor-qrcode-jknight.netlify.app/](https://fementor-qrcode-jknight.netlify.app/)
 
 ## My process
 
