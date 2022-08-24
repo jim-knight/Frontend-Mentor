@@ -1,33 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+<html lang="en" class="min-h-screen font-body">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Stats preview card component</title>
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+		<link href="./dist/output.css" rel="stylesheet" />
 
-  Get insights that help your business grow.
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap" rel="stylesheet" />
 
-  Discover the benefits of data analytics and make better decisions regarding revenue, customer 
-  experience, and overall efficiency.
+		<title>Frontend Mentor | Stats preview card component</title>
 
-  10k+ companies
-  314 templates
-  12m+ queries
+		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+		<style>
+			.attribution {
+				font-size: 11px;
+				text-align: center;
+			}
+			.attribution a {
+				color: hsl(228, 45%, 44%);
+			}
+		</style>
+	</head>
+	<body class="bg-darkBlue min-h-screen flex flex-col font-body font-normal text-white">
+		<main class="flex-grow flex min-h-full justify-center items-center">
+			<div id="card" class="flex items-stretch max-w-5xl bg-desaturatedBlue rounded-lg drop-shadow-2xl text-base">
+				<section class="content p-16 w-6/12">
+					<h1 class="text-4xl font-bold pb-5">Get <span class="text-softViolet">insights</span> that help your business grow.</h1>
+					<p class="text-white/75">
+						Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency.
+					</p>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+					<ul id="stats" class="grid grid-cols-3 pt-16 font-alternate uppercase text-xs font-normal text-white/60">
+						<li><span class="font-body font-bold text-2xl text-white">10k+</span><br />companies</li>
+						<li>
+							<span class="font-body font-bold text-2xl text-white">314</span><br />
+							templates
+						</li>
+						<li><span class="font-body font-bold text-2xl text-white">12m+</span><br />queries</li>
+					</ul>
+				</section>
+				<figure class="w-6/12 relative rounded-r-lg bg-softViolet">
+					<img
+						class="max-w-none w-full h-full object-cover mix-blend-multiply opacity-70 rounded-r-lg"
+						src="./images/image-header-desktop.jpg"
+						alt="Improve your front-end skills by building projects"
+					/>
+				</figure>
+			</div>
+		</main>
+
+		<footer id="attribution" class="justify-self-end pb-2 text-xs text-center">
+			Challenge by <a class="text-orange-400" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
+			<a class="text-orange-400" href="https://github.com/jim-knight">James Knight</a>.
+		</footer>
+	</body>
 </html>
