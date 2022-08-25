@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="min-h-screen font-body">
+<html lang="en" id="html-tag" class="min-h-screen font-body dark dark:bg-darkBlue">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,38 +15,60 @@
 
 		<title>Frontend Mentor | Stats preview card component</title>
 
-		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-		<style>
-			.attribution {
-				font-size: 11px;
-				text-align: center;
+		<script>
+			let html = document.getElementById('html-tag');
+			let icon = document.getElementById('dark-mode-icon');
+
+			let toggleMode = () => {
+				if (html.classList.contains('dark')) {
+					html.classList.remove('dark');
+					html.classList.add('light');
+					// Store that bad boy
+					localStorage.theme = 'light';
+				} else {
+					html.classList.add('dark');
+					html.classList.remove('light');
+					localStorage.theme = 'dark';
+				}
+			};
+
+			if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+				html.classList.add('dark');
+				html.classList.remove('light');
+				localStorage.theme = 'dark';
+			} else {
+				html.classList.remove('dark');
+				html.classList.add('light');
+				localStorage.theme = 'light';
 			}
-			.attribution a {
-				color: hsl(228, 45%, 44%);
-			}
-		</style>
+		</script>
 	</head>
-	<body class="bg-darkBlue min-h-screen flex flex-col font-body font-normal text-white">
-		<main class="flex-grow flex min-h-full justify-center items-center">
-			<div id="card" class="flex items-stretch max-w-5xl bg-desaturatedBlue rounded-lg drop-shadow-2xl text-base">
-				<section class="content p-16 w-6/12">
-					<h1 class="text-4xl font-bold pb-5">Get <span class="text-softViolet">insights</span> that help your business grow.</h1>
-					<p class="text-white/75">
+
+	<body class="bg-softViolet/20 dark:bg-darkBlue min-h-screen flex flex-col font-body font-normal text-white">
+		<main class="flex-grow flex flex-col min-h-full justify-center items-center">
+			<button id="dark-mode-toggle" class="text-darkBlue dark:text-white" onclick="toggleMode()">Toggle Dark Mode</button>
+
+			<div id="card" class="flex flex-col lg:flex-row items-stretch max-w-5xl m-5 bg-white dark:bg-desaturatedBlue rounded-lg drop-shadow-2xl text-base">
+				<section class="content p-6 lg:p-16 lg:w-6/12 order-2 lg:order-1 text-center lg:text-left">
+					<h1 class="text-3xl leading-tight lg:text-4xl font-bold pb-5 text-darkBlue dark:text-white">
+						Get <span class="text-softViolet">insights</span> that help your business grow.
+					</h1>
+					<p class="text-desaturatedBlue dark:text-white/75">
 						Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency.
 					</p>
 
-					<ul id="stats" class="grid grid-cols-3 pt-16 font-alternate uppercase text-xs font-normal text-white/60">
-						<li><span class="font-body font-bold text-2xl text-white">10k+</span><br />companies</li>
+					<ul id="stats" class="grid grid-cols-1 lg:grid-cols-3 gap-5 pt-16 font-alternate uppercase text-xs font-normal text-softViolet dark:text-white/60">
+						<li><span class="font-body font-bold text-2xl text-darkBlue dark:text-white">10k+</span><br />companies</li>
 						<li>
-							<span class="font-body font-bold text-2xl text-white">314</span><br />
+							<span class="font-body font-bold text-2xl text-darkBlue dark:text-white">314</span><br />
 							templates
 						</li>
-						<li><span class="font-body font-bold text-2xl text-white">12m+</span><br />queries</li>
+						<li><span class="font-body font-bold text-2xl text-darkBlue dark:text-white">12m+</span><br />queries</li>
 					</ul>
 				</section>
-				<figure class="w-6/12 relative rounded-r-lg bg-softViolet">
+				<figure class="lg:w-6/12 order-1 lg:order-2 relative rounded-tl-lg lg:rounded-tl-none rounded-tr-lg lg:rounded-br-lg bg-softViolet">
 					<img
-						class="max-w-none w-full h-full object-cover mix-blend-multiply opacity-70 rounded-r-lg"
+						class="max-w-none w-full max-h-96 lg:max-h-full h-full object-cover mix-blend-multiply opacity-70 rounded-tl-lg lg:rounded-tl-none rounded-tr-lg lg:rounded-br-lg"
 						src="./images/image-header-desktop.jpg"
 						alt="Improve your front-end skills by building projects"
 					/>
@@ -54,7 +76,7 @@
 			</div>
 		</main>
 
-		<footer id="attribution" class="justify-self-end pb-2 text-xs text-center">
+		<footer id="attribution" class="justify-self-end pb-2 text-xs text-center text-desaturatedBlue dark:text-white">
 			Challenge by <a class="text-orange-400" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
 			<a class="text-orange-400" href="https://github.com/jim-knight">James Knight</a>.
 		</footer>
