@@ -674,11 +674,6 @@ video {
   background-color: hsl(var(--color-accent) / var(--tw-bg-opacity));
 }
 
-.bg-darkBlue {
-  --tw-bg-opacity: 1;
-  background-color: hsl(var(--color-main-background) / var(--tw-bg-opacity));
-}
-
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
